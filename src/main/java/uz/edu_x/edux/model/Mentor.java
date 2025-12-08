@@ -3,9 +3,6 @@ package uz.edu_x.edux.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
-
 @Getter
 @Setter
 @Entity
@@ -13,16 +10,10 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "roles")
-public class Role {
+@Table(name = "mentors")
+public class Mentor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String description;
-    @ManyToMany
-    private List<Permission> permission;
-    @OneToMany(mappedBy = "role")
-    private List<User> user;
 }

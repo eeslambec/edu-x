@@ -27,5 +27,6 @@ public class Course {
     private BigDecimal price;
     private Integer discount;
     private Integer videosCount;
+
     private Rating rating;
 }
