@@ -2,6 +2,7 @@ package uz.edu_x.edux.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import uz.edu_x.edux.model.enums.UserStatus;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
@@ -30,4 +32,5 @@ public class User {
     private List<Course> favourites;
     @ManyToMany
     private List<Group>  groups;
+    private UserStatus status;
 }
