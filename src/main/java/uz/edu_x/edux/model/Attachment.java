@@ -17,9 +17,14 @@ public class Attachment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String originalName;
+
     private String type;
+
     private Long size;
+
     private String path;
+
     private AttachmentStatus attachmentStatus;
 }

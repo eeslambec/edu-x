@@ -16,11 +16,15 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne
     private Course course;
+
     @ManyToOne
     private Mentor mentor;
+
     private float rating;
+
     @ManyToOne
     private User ratedBy;
 

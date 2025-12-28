@@ -19,18 +19,28 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
+
     private String username;
+
     private String password;
+
     private String email;
+
     private String firstName;
+
     private String lastName;
+
     @ManyToOne
     private Role role;
+
     @ManyToOne
     private Attachment profilePhoto;
+
     @ManyToMany
     private List<Course> favourites;
+
     @ManyToMany
     private List<Group>  groups;
+
     private UserStatus status;
 }
